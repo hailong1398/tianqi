@@ -1,6 +1,9 @@
 package com.mylife.tianqi;
 
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -145,9 +148,16 @@ public class HttpRequestUtil {
         return responseContent;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String url = "http://cdn.weather.hao.360.cn/sed_api_weather_info.php?code=101010100&v=2&param=weather&app=hao360&_jsonp=__jsonp10__&t=2355130";
-        System.out.println(doGet(url));
+        String rtn = doGet(url);
+        int first = rtn.indexOf('(');
+        int last = rtn.indexOf(')');
+        String json = rtn.substring(first + 1, last);
+        System.out.println(json);
+        JSONObject object = new JSONObject(json);
+        System.out.println(object.get("time"));
+
     }
 
 }

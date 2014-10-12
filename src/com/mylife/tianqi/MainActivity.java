@@ -1,5 +1,6 @@
 package com.mylife.tianqi;
 
+import com.mylife.tianqi.api.Navigator360;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -18,6 +19,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+        Navigator360.getWeatherInfo(null);
 	}
 
 }
