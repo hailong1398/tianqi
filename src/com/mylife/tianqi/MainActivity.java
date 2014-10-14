@@ -1,26 +1,34 @@
 package com.mylife.tianqi;
 
-import com.mylife.tianqi.api.Navigator360;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.app.Activity;
-import android.util.Log;
-import android.view.Menu;
-import android.widget.TextView;
+import com.mylife.tianqi.api.Navigator360;
 
 public class MainActivity extends Activity {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        new myThread().start();
+        setContentView(R.layout.activity_main);
+    }
 
-        Navigator360.getWeatherInfo(null);
-	}
+    private Handler handler = new Handler() {
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
+
+    class myThread extends Thread {
+        public void run() {
+            Navigator360.getWeatherInfo("");
+            Message msg = new Message();
+            msg.what = 2;
+            handler.sendMessage(msg);
+        }
+    }
+
 
 }

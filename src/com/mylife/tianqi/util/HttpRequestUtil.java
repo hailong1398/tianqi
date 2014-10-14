@@ -1,7 +1,6 @@
-package com.mylife.tianqi;
+package com.mylife.tianqi.util;
 
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;

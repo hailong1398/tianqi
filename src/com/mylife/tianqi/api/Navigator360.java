@@ -1,7 +1,7 @@
 package com.mylife.tianqi.api;
 
 import android.util.Log;
-import com.mylife.tianqi.HttpRequestUtil;
+import com.mylife.tianqi.util.HttpRequestUtil;
 import org.json.JSONObject;
 
 /**
@@ -17,10 +17,9 @@ public class Navigator360 {
             int first = rtn.indexOf('(');
             int last = rtn.indexOf(')');
             String json = rtn.substring(first + 1, last);
-            System.out.println(json);
             Log.i("json:" ,json);
             JSONObject object = new JSONObject(json);
-            System.out.println(object.toString());
+            Log.i("object:" ,object.toString());
         }catch (Exception e){
             e.printStackTrace();
         }
