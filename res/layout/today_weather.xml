@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    >
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+        >
 
-    <RelativeLayout
-        android:id="@+id/today_weather_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10.0dip" >
+    <LinearLayout
+            android:id="@+id/today_weather_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10.0dip">
 
         <!-- 天气图标 -->
         <ImageView
-            android:id="@+id/weather_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true"
-            android:src="@drawable/biz_plugin_weather_qing"
-             />
+                android:id="@+id/weather_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/biz_plugin_weather_qing"
+                />
 
         <!-- 温度相关 -->
         <TextView
-            android:id="@+id/temperature"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dip"
-            android:layout_above="@id/weather_img"
-            android:singleLine="true"
-            android:text="温度"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/biz_plugin_weather_climate_textsize" />
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="@dimen/today_weather_margin_top"
+                android:singleLine="true"
+                android:text="08/21 摄氏度"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/biz_plugin_weather_climate_textsize"
+                />
 
         <!-- 周几 以及 晴或者威风 -->
 
         <!-- pm 值 -->
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>
