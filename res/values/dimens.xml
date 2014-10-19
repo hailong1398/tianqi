@@ -4,4 +4,10 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="biz_plugin_weather_climate_textsize">20.0sp</dimen>
+
+    <dimen name="biz_plugin_weather_temperature_textsize">30.0sp</dimen>
+    
+    <dimen name="today_weather_margin_top">50dp</dimen>
+
 </resources>
