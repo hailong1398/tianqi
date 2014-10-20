@@ -8,15 +8,15 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:background="@drawable/biz_news_local_weather_bg_big">
+        android:background="@drawable/biz_news_local_weather_bg_big" android:weightSum="1">
 
         <!-- 加载当天的天气 -->
         <include
                 android:id="@+id/weather_today"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="100sp"
-                layout="@layout/today_weather" />
+                layout="@layout/today_weather"/>
 
     </LinearLayout>
 
