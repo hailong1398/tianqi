@@ -23,7 +23,7 @@
             android:layout_height="30.0dp"
             android:layout_marginLeft="10dip"
             android:singleLine="true"
-            android:text="08/21 摄氏度"
+            android:text="暂未查询到"
             android:textColor="@android:color/white"
             android:textSize="@dimen/biz_plugin_weather_climate_textsize"
             />
@@ -35,7 +35,7 @@
             android:layout_height="30.0dp"
             android:layout_marginLeft="10dip"
             android:singleLine="true"
-            android:text="10/20 星期一 小雨 微风"
+            android:text="暂未查到"
             android:textColor="@android:color/white"
             android:textSize="@dimen/biz_plugin_weather_climate_textsize"
             />

@@ -18,9 +18,8 @@ public class Navigator360 {
             int first = rtn.indexOf('(');
             int last = rtn.indexOf(')');
             String json = rtn.substring(first + 1, last);
-            Log.i("json:" ,json);
             JSONObject object = new JSONObject(json);
-            Log.i("object:" ,object.toString());
+            return object;
         }catch (Exception e){
             e.printStackTrace();
         }
